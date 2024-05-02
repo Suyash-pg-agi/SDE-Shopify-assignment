@@ -1,0 +1,34 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "0439120b2226c28c6ce9efb4946e4af2"
+name = "Chatbot"
+handle = "clothing-12"
+application_url = "https://alternative-mobility-attachment-collections.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "trying-dev.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_orders,read_products,write_products"
+
+[auth]
+redirect_urls = [
+  "https://alternative-mobility-attachment-collections.trycloudflare.com/auth/callback",
+  "https://alternative-mobility-attachment-collections.trycloudflare.com/auth/shopify/callback",
+  "https://alternative-mobility-attachment-collections.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+  [webhooks.privacy_compliance]
+  customer_deletion_url = "https://shopify.digitalversions.in/api/webhooks/customer_deletion"
+  customer_data_request_url = "https://shopify.digitalversions.in/api/webhooks/customer_request"
+  shop_deletion_url = "https://shopify.digitalversions.in/api/webhooks/deletion"
+
+[pos]
+embedded = false
